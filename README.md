@@ -17,3 +17,14 @@ Um programa que organiza senhas de usuários para diferentes serviços de forma 
 | Gerar senhas seguras   | 1 dia  |
 | Recuperar senhas       | 2 dias |
 | Exportar backup        | 1 dia  |
+
+---
+
+## **Desafios Enfrentados**
+1. **Gerenciamento de branches**: Durante o desenvolvimento, precisei aprender a criar branches independentes para cada funcionalidade e garantir que elas fossem mergeadas corretamente.
+2. **Mensagens de commits**: Focar em escrever mensagens claras e informativas para os commits foi algo que precisei aperfeiçoar. No início, fiz commits mais genéricos, mas ajustei para que cada mensagem descrevesse exatamente o que foi implementado.
+3. **Implementação da criptografia**: Escolher uma forma simples e eficiente de criptografar senhas foi desafiador. Optei pelo uso do módulo `base64` para simplificar o processo inicial, com intenção de melhorias futuras.
+4. **Exportação de dados**: Implementar uma funcionalidade que exportasse os dados com segurança sem comprometer a integridade dos arquivos exigiu atenção extra.
+
+---
+
