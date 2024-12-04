@@ -16,3 +16,16 @@ def gerar_senha(segura=True, tamanho=12):
     if segura:
         caracteres += string.punctuation
     return ''.join(random.choice(caracteres) for _ in range(tamanho))
+
+def recuperar_senha(servico):
+    if not os.path.exists("senhas.txt"):
+        print("Nenhuma senha armazenada!")
+        return
+    with open("senhas.txt", "r") as f:
+        for linha in f:
+            serv, senha_codificada = linha.strip().split(":")
+            if serv == servico:
+                senha = base64.b64decode(senha_codificada.encode("utf-8")).decode("utf-8")
+                print(f"Senha para {servico}: {senha}")
+                return
+    print("Serviço não encontrado!")
