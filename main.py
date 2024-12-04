@@ -16,7 +16,6 @@ def armazenar_senha():
     senhas[servico] = senha_criptografada
     print(f"Senha para '{servico}' armazenada com sucesso!")
 
-<<<<<<< HEAD
 def recuperar_senha():
     servico = input("Digite o nome do serviço para recuperar a senha: ")
     if servico in senhas:
@@ -95,4 +94,3 @@ def exportar_backup():
     with open("backup_senhas.txt", "w") as f:
         f.write(dados)
     print("Backup exportado com sucesso!")
->>>>>>> de31cef5ec895600f0d7c491bbd88cdcb35deb02
