@@ -28,3 +28,9 @@ Um programa que organiza senhas de usuários para diferentes serviços de forma 
 
 ---
 
+## **Como o Git me ajudou**
+1. **Organização**: O Git foi essencial para dividir o projeto em etapas claras. Criar uma branch para cada funcionalidade me permitiu trabalhar de forma independente em diferentes partes do sistema sem interferir no código principal.
+2. **Histórico de mudanças**: Pude acompanhar facilmente todas as alterações feitas no projeto, o que ajudou a identificar e corrigir problemas rapidamente.
+3. **Resolução de conflitos**: Durante os merges, enfrentei pequenos conflitos de código. Graças ao Git, consegui resolvê-los de forma eficiente, garantindo que o projeto permanecesse funcional.
+4. **Documentação**: Utilizar commits frequentes e bem documentados facilitou a criação de um histórico detalhado do projeto, o que será útil para melhorias futuras.
+5. **Backup seguro**: Com o repositório no GitHub, tive a tranquilidade de saber que todo o progresso estava salvo remotamente, reduzindo os riscos de perda de dados.
