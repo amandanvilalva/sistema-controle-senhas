@@ -16,6 +16,7 @@ def armazenar_senha():
     senhas[servico] = senha_criptografada
     print(f"Senha para '{servico}' armazenada com sucesso!")
 
+<<<<<<< HEAD
 def recuperar_senha():
     servico = input("Digite o nome do serviço para recuperar a senha: ")
     if servico in senhas:
@@ -70,3 +71,27 @@ def menu():
 # Executa o menu
 if __name__ == "__main__":
     menu()
+=======
+def recuperar_senha(servico):
+    if not os.path.exists("senhas.txt"):
+        print("Nenhuma senha armazenada!")
+        return
+    with open("senhas.txt", "r") as f:
+        for linha in f:
+            serv, senha_codificada = linha.strip().split(":")
+            if serv == servico:
+                senha = base64.b64decode(senha_codificada.encode("utf-8")).decode("utf-8")
+                print(f"Senha para {servico}: {senha}")
+                return
+    print("Serviço não encontrado!")
+
+def exportar_backup():
+    if not os.path.exists("senhas.txt"):
+        print("Nenhuma senha para exportar!")
+        return
+    with open("senhas.txt", "r") as f:
+        dados = f.read()
+    with open("backup_senhas.txt", "w") as f:
+        f.write(dados)
+    print("Backup exportado com sucesso!")
+>>>>>>> de31cef5ec895600f0d7c491bbd88cdcb35deb02
