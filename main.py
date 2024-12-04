@@ -29,3 +29,13 @@ def recuperar_senha(servico):
                 print(f"Senha para {servico}: {senha}")
                 return
     print("Serviço não encontrado!")
+
+def exportar_backup():
+    if not os.path.exists("senhas.txt"):
+        print("Nenhuma senha para exportar!")
+        return
+    with open("senhas.txt", "r") as f:
+        dados = f.read()
+    with open("backup_senhas.txt", "w") as f:
+        f.write(dados)
+    print("Backup exportado com sucesso!")
